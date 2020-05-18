@@ -1,0 +1,32 @@
+﻿<Page x:Class="CourseWork1.TestPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseWork1"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TestPage">
+
+    <Grid Background="AliceBlue">
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF293955">
+            <TextBlock Text="Mastering your skills" Foreground="AliceBlue" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </Grid>
+
+        <Grid>
+            <TextBlock Text="Choose the test that better suits you:" FontSize="24" Foreground="#FF293955" FontWeight="Bold" Height="40" Width="420" VerticalAlignment="Center" Margin="190,164,190,246"/>
+            <materialDesign:PackIcon Kind="Mouse" Width="50" Height="50" Foreground="#FF293955" HorizontalAlignment="Center" Margin="375,92,375,0"/>
+        </Grid>
+        <Grid Height="200" Width="400" Margin="0,162,400,88">
+            <TextBlock Text="If you want to practiсe you skills " FontSize="22" Foreground="#FF293955" Height="30" FontWeight="Bold" Margin="25,93,25,77" />
+            <Button Name="Test" Content="Master specific encoding" Background="#FF293955" BorderBrush="#FF293955" Foreground="AliceBlue" Width="200" Height="50" Margin="100,140,100,10" Click="Test_Click" />
+        </Grid>
+
+        <Grid Height="200" Width="400" Margin="400,162,0,88">
+            <TextBlock Text="If you want to pass the final test " FontSize="22" Foreground="#FF293955" Height="30" FontWeight="Bold" Margin="25,93,25,77" />
+            <Button x:Name="finalTest" Content="Test on all encodings" Background="#FF293955" BorderBrush="#FF293955" Foreground="AliceBlue" Width="200" Height="50" Margin="100,140,100,10" Click ="finalTest_Click"/>
+        </Grid>
+        
+    </Grid>
+</Page>

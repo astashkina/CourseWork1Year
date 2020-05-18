@@ -1,0 +1,41 @@
+﻿<Page x:Class="CourseWork1.Instructions"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseWork1"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Instructions">
+
+    <Grid x:Name="choice" Background="AliceBlue">
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF293955">
+            <TextBlock Text="Step-by-step instructions" Foreground="AliceBlue" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </Grid>
+
+        <Grid>
+            <TextBlock Text="Choose the encoding you want to study:" FontSize="20" Foreground="#FF293955" HorizontalAlignment="Center" Margin="94,97,302,324" FontWeight="Bold" Width="404" />
+            <TextBlock Text="You can choose one or more " FontSize="20" Foreground="#FF293955" HorizontalAlignment="Center" Margin="217,119,218,297"  Width="365" />
+            <materialDesign:PackIcon Kind="CheckBox" Width="Auto" Height="60" Foreground="#FF293955" Margin="29,81,711,0" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+        </Grid>
+        
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Height="200" Width="200" Margin="142,170,458,80">
+            <CheckBox x:Name="RZinst" Content="RZ" Foreground="#FF293955" FontSize="22"/>
+            <CheckBox x:Name="NRZinst" Content="NRZ" Foreground="#FF293955" FontSize="22"/>
+            <CheckBox x:Name="NRZIinst" Content="NRZI" Foreground="#FF293955" FontSize="22"/>
+            <CheckBox x:Name="MANCHinst" Content="Manchester" Foreground="#FF293955" FontSize="22"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Height="200" Width="200" Margin="497,170,103,80">
+            <CheckBox x:Name="DMANCHinst" Content="Manchester D" Foreground="#FF293955" FontSize="22"/>
+            <CheckBox x:Name="MLT3inst" Content="MLT-3" Foreground="#FF293955" FontSize="22"/>
+            <CheckBox x:Name="TwoB1Qinst" Content="2B1Q" Foreground="#FF293955" FontSize="22"/>
+            <CheckBox x:Name="ALLinst" Checked="ALLinst_Checked" Unchecked="ALLinst_Unchecked" Content="All encodings" Foreground="#FF293955" FontSize="22"/>
+        </StackPanel>
+
+        <Button x:Name="SubmitButton" Content="Submit" Foreground="AliceBlue" Background="#FF293955" Width="150" Height="50" Click="SubmitButton_Click" HorizontalAlignment="Center" RenderTransformOrigin="0.502,1.719" Margin="330,358,320,42" />
+
+    </Grid>
+</Page>

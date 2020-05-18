@@ -1,0 +1,16 @@
+﻿<Page x:Class="CourseWork1.DefaultPAge"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseWork1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DefaultPAge">
+
+    <Grid Background="AliceBlue">
+        <TextBlock Width="750" FontSize="22" FontWeight="Bold"  Foreground="#FF293955" Margin="25,70,25,272" HorizontalAlignment="Center"><Run Text="«Program for Text Message Visualization in Various Physical Encodings»"/><LineBreak/><Run Text="        Developed by student of the first year CS SE Astashkina Maria"/><LineBreak/><Run Text="&#x9;&#x9;&#x9;     Moscow 2020"/></TextBlock>
+
+        <Image x:Name="HSElogo" Source="Resources\logohse.png" Width="189" Height="240" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="305,0,306,10" />
+    </Grid>
+</Page>

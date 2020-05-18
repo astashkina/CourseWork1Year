@@ -1,0 +1,48 @@
+﻿<Page x:Class="CourseWork1.AccountPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseWork1"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AccountPage">
+
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF293955">
+            <TextBlock Text="Your Statistics" Foreground="AliceBlue" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </Grid>
+
+        <TextBlock Text="Your results in surtain tests: " FontSize="20" Foreground="#FF293955" FontWeight="Bold" Margin="82,78,410,266.565"/>
+        <materialDesign:PackIcon Kind="Medal" Width="40" Height="40" Foreground="#FF293955" Margin="37,274,0,0"/>
+        <materialDesign:PackIcon Kind="Award" Width="40" Height="40" Foreground="#FF293955" Margin="37,78,0,0" />
+        <materialDesign:PackIcon Kind="Support" Width="50" Height="50" Foreground="#FF293955" Margin="0,0,22,30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Height="118" Width="200" Margin="141,118,0,0">
+            <TextBlock Name="TextRZ" Text="RZ: " FontSize="20" Foreground="#FF293955" FontWeight="Bold"/>
+            <TextBlock Name="TextNRZ" Text="NRZ: " FontSize="20" Foreground="#FF293955" FontWeight="Bold"/>
+            <TextBlock Name="TextNRZI" Text="NRZI: " FontSize="20" Foreground="#FF293955" FontWeight="Bold"/>
+            <TextBlock Name="TextMANCH" Text="MANCH: " FontSize="20" Foreground="#FF293955" FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Height="118" Width="200" Margin="511,118,0,0">
+            <TextBlock Name="TextDMANCH" Text="DMANCH: " FontSize="20" Foreground="#FF293955" FontWeight="Bold"/>
+            <TextBlock Name="TextMLT3" Text="MLT3: " FontSize="20" Foreground="#FF293955" FontWeight="Bold"/>
+            <TextBlock Name="Text2B1Q" Text="2B1Q: " FontSize="20" Foreground="#FF293955" FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="0,0,0,10" Grid.RowSpan="2" HorizontalAlignment="Right" Width="297" Height="118" VerticalAlignment="Bottom">
+            <TextBlock Text="For any support text us" FontSize="20" Foreground="#FF293955" FontWeight="Bold"/>
+            <TextBlock Text=""/>
+            <TextBlock Text="Telegram: @astashkina_m" FontSize="20" Foreground="#FF293955"/>
+            <TextBlock Text="Mail: mnastashkina@edu.hse.ru" FontSize="20" Foreground="#FF293955"/>
+        </StackPanel>
+
+        <TextBlock Name="TextResult" Text="Your last Final Test resault: " FontSize="20" Foreground="#FF293955" FontWeight="Bold" Margin="77,274,441,59.565"/>
+
+    </Grid>
+</Page>

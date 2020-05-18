@@ -1,0 +1,19 @@
+﻿<Window x:Class="CourseWork1.ExampleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="ExampleWindow" Height="450" Width="800">
+    <Grid Background="AliceBlue">
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF293955">
+            <TextBlock Text="Step-by-step example" Foreground="AliceBlue" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </Grid>
+        <Button x:Name="BackToInstructions" Foreground="AliceBlue" Background="#FF293955" BorderBrush="#FF293955" Width="40" Height="40" Margin="745,10,10,372.5" Click="BackToInstructions_Click">
+            <materialDesign:PackIcon Kind="Close" Height="30" Width="30" Margin="-10"/>
+        </Button>
+        <TextBlock x:Name="Examples" Width="600" Height="300" Margin="98,79,97,43.5"/>
+    </Grid>
+</Window>

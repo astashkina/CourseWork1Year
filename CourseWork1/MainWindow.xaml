@@ -1,0 +1,24 @@
+﻿<Window x:Class="CourseWork1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Height="600" Width="1080" ResizeMode="NoResize" WindowStyle="None">
+    <Grid Background="AliceBlue">
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF293955">
+            <TextBlock Text="Course Work by Astashkina Mariia HSE CS SE 1 year" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20" Foreground="AliceBlue" Margin="0,16,55,18" />
+            <materialDesign:PackIcon Margin="10" Foreground="AliceBlue" Kind="DesktopMac" HorizontalAlignment="Right" VerticalAlignment="Center" Width="25" Height="25"/>
+        </Grid>
+        <Grid>
+            <TextBlock x:Name="DefaultInfo"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" TextWrapping="Wrap"  Height="319" Width="775"><Run FontWeight="Bold" FontSize="20" Text="Hello!"/><LineBreak/><Run FontWeight="Bold" FontSize="20"/><LineBreak FontSize="20"/><Run FontSize="20" Text="This application will provide you with the opportunity "/><Run FontWeight="Bold" FontSize="20" Text="to visualize text messages in various physical encodings"/><Run FontSize="20" Text=", learn the way it works, try to do it yourself and master your skills. This technology is used daily. "/><LineBreak FontSize="20"/><Run FontSize="20" Text="Unfortunately, even not all IT specialists are familiar with this simple technology. It is used in Ethernet-cable and in transferring information to flash drives or HDD. Knowledge gained with our product will help you to understand how we managed to share data with devices only. "/><LineBreak FontSize="20"/><LineBreak FontSize="20"/><Run FontSize="20" Text="Hope, you are curious to broaden your horizons! If you want to open this product - click the button below."/></TextBlock>
+            <Button Content="Click me" HorizontalAlignment="Center" Margin="437,0,423,60" VerticalAlignment="Bottom" Width="220" Height="59" Background="#FF293955" BorderBrush="AliceBlue" Click="OpenWindow" FontSize="20" FontWeight="Bold" Foreground="AliceBlue"/>
+        </Grid>
+
+
+
+
+
+    </Grid>
+</Window>
