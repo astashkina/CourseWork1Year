@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CourseWork1"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="TestWindow" Height="450" Width="800">
+        Title="TestWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Background="AliceBlue">
         <Grid.RowDefinitions>
             <RowDefinition Height="88*"/>

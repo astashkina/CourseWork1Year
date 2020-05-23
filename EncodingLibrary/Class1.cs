@@ -73,8 +73,8 @@ namespace EncodingLibrary
                         "Now we transform this codes into binary numeral system: 73 = 01001001; 84 = 01010100.\n" +
                         "Now we are just following the RZ rules:\n" +
                         "\tWe start from the bottom middle level and read by front edge. The first number is 0.\n" +
-                        "\t\t => we code it as just _ (middle and high levels). \n" +
-                        "\t The next number is 1 => we code it as |_|‾  (low and high levels). \n" +
+                        "\t\t => we code it as |‾|_ (middle and high levels). \n" +
+                        "\t The next number is 1 => we code it as |_|‾  (low and middle levels). \n" +
                         "Good job! Continue doing the same job and you will reach the encoding! You can check yourself " +
                         "by encoding word IT (2 button in menu).\n\n";
         }
@@ -87,8 +87,8 @@ namespace EncodingLibrary
             if (code[0] == '1')
             {
                 System.Windows.Point point1 = new System.Windows.Point(50, 80);
-                System.Windows.Point point2 = new System.Windows.Point(50, 60);
-                System.Windows.Point point3 = new System.Windows.Point(60, 60);
+                System.Windows.Point point2 = new System.Windows.Point(50, 90);
+                System.Windows.Point point3 = new System.Windows.Point(60, 90);
                 System.Windows.Point point4 = new System.Windows.Point(60, 80);
                 System.Windows.Point point5 = new System.Windows.Point(70, 80);
                 points.Add(point1); points.Add(point2); points.Add(point3);  points.Add(point4); points.Add(point5);
@@ -96,21 +96,27 @@ namespace EncodingLibrary
             else
             {
                 System.Windows.Point point1 = new System.Windows.Point(50, 80);
-                System.Windows.Point point2 = new System.Windows.Point(70, 80);
-                points.Add(point1); points.Add(point2);
+                System.Windows.Point point2 = new System.Windows.Point(50, 70);
+                System.Windows.Point point3 = new System.Windows.Point(60, 70);
+                System.Windows.Point point4 = new System.Windows.Point(60, 80);
+                System.Windows.Point point5 = new System.Windows.Point(70, 80);
+                points.Add(point1); points.Add(point2); points.Add(point3); points.Add(point4); points.Add(point5);
             }
 
             for (int i = 1; i < code.Length; i++)
             {
                 if (code[i] == '0')
                 {
-                    points.Add(new System.Windows.Point(points[points.Count - 1].X + 20, points[points.Count - 1].Y));
+                    points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y - 10));
+                    points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
+                    points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y + 10));
+                    points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
                 }
                 else if (code[i] == '1')
                 {
-                    points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y - 20));
+                    points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y + 10));
                     points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
-                    points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y + 20));
+                    points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y - 10));
                     points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
                 }
             }
@@ -197,13 +203,13 @@ namespace EncodingLibrary
                 // Point point3 = new Point(10, -10);
                 System.Windows.Point point1 = new System.Windows.Point(50, 80);
                 System.Windows.Point point2 = new System.Windows.Point(50, 60);
-                System.Windows.Point point3 = new System.Windows.Point(60, 60);
+                System.Windows.Point point3 = new System.Windows.Point(70, 60);
                 points.Add(point1); points.Add(point2); points.Add(point3);
             }
             else
             {
                 System.Windows.Point point1 = new System.Windows.Point(50, 80);
-                System.Windows.Point point2 = new System.Windows.Point(60, 80);
+                System.Windows.Point point2 = new System.Windows.Point(70, 80);
                 points.Add(point1); points.Add(point2);
             }
 
@@ -213,24 +219,24 @@ namespace EncodingLibrary
                 {
                     if (code[i - 1] == '0')
                     {
-                        points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
+                        points.Add(new System.Windows.Point(points[points.Count - 1].X + 20, points[points.Count - 1].Y));
                     }
                     else
                     {
                         points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y + 20));
-                        points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
+                        points.Add(new System.Windows.Point(points[points.Count - 1].X + 20, points[points.Count - 1].Y));
                     }
                 }
                 else if (code[i] == '1')
                 {
                     if (code[i - 1] == '1')
                     {
-                        points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
+                        points.Add(new System.Windows.Point(points[points.Count - 1].X + 20, points[points.Count - 1].Y));
                     }
                     else
                     {
                         points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y - 20));
-                        points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
+                        points.Add(new System.Windows.Point(points[points.Count - 1].X + 20, points[points.Count - 1].Y));
                     }
                 }
             }
@@ -255,7 +261,7 @@ namespace EncodingLibrary
 
             points.Add(point1); points.Add(point2); points.Add(point3); points.Add(point4); points.Add(point5);
 
-            for (int i = 1; i < code.Length / 2; i++)
+            for (int i = 1; i < code.Length; i++)
             {
                 points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y - 20));
                 points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
@@ -312,13 +318,13 @@ namespace EncodingLibrary
             {
                 System.Windows.Point point1 = new System.Windows.Point(50, 80);
                 System.Windows.Point point2 = new System.Windows.Point(50, 60);
-                System.Windows.Point point3 = new System.Windows.Point(60, 60);
+                System.Windows.Point point3 = new System.Windows.Point(70, 60);
                 points.Add(point1); points.Add(point2); points.Add(point3);
             }
             else
             {
                 System.Windows.Point point1 = new System.Windows.Point(50, 80);
-                System.Windows.Point point2 = new System.Windows.Point(60, 80);
+                System.Windows.Point point2 = new System.Windows.Point(70, 80);
                 points.Add(point1); points.Add(point2);
             }
 
@@ -332,11 +338,11 @@ namespace EncodingLibrary
                     else
                         points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y + 20));
 
-                    points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
+                    points.Add(new System.Windows.Point(points[points.Count - 1].X + 20, points[points.Count - 1].Y));
                 }
                 else if (code[i] == '0')
                 {
-                    points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
+                    points.Add(new System.Windows.Point(points[points.Count - 1].X + 20, points[points.Count - 1].Y));
                 }
             }
 
@@ -360,7 +366,7 @@ namespace EncodingLibrary
 
             points.Add(point1); points.Add(point2); points.Add(point3); points.Add(point4); points.Add(point5);
 
-            for (int i = 1; i < code.Length / 2; i++)
+            for (int i = 1; i < code.Length; i++)
             {
                 points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y - 20));
                 points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
@@ -792,7 +798,7 @@ namespace EncodingLibrary
                 points.Add(point1); points.Add(point2);
             }
 
-            for (int i = 4; i < code.Length; i+=2)
+            for (int i = 4; i < code.Length + 1; i+=2)
             {
                 if (code[i - 2] == '0' && code[i - 1] == '0')
                 {
@@ -837,7 +843,7 @@ namespace EncodingLibrary
 
             points.Add(point1); points.Add(point2); points.Add(point3); points.Add(point4); points.Add(point5);
 
-            for (int i = 1; i < (code.Length / 2) - 1; i++)
+            for (int i = 1; i < (code.Length / 2); i++)
             {
                 points.Add(new System.Windows.Point(points[points.Count - 1].X, points[points.Count - 1].Y - 20));
                 points.Add(new System.Windows.Point(points[points.Count - 1].X + 10, points[points.Count - 1].Y));
